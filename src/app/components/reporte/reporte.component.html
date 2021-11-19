@@ -1,0 +1,22 @@
+<h2 style="margin-bottom: 12px;">Hacer Reporte</h2>
+<form #addForm="ngForm" (ngSubmit)="hacerReporte(addForm)">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">identificacion del tecnico</label>
+        <input type="text" ngModel name="idTecnico" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el id del tecnico">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">identificacion del servicio</label>
+        <input type="text" ngModel name="idServicio" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el id del tecnico">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">fecha de inicio</label>
+        <input type="date" ngModel name="fechaInicio" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el id del tecnico">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">fecha del fin</label>
+        <input type="date" ngModel name="fechaFin" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el id del tecnico">
+    </div>
+    <div class="col-auto">
+        <button type="submit" type="submit" [disabled]="addForm.invalid" class="btn btn-primary mb-3">Realizar reporte</button>
+    </div>
+</form>
