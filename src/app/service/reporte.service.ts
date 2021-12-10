@@ -15,10 +15,14 @@ export class ReporteService {
 
   constructor(private _http: HttpClient) { }
 
-  public hacerReporte(reporte: Reporte): Observable<Respuesta> {
+  hacerReporte(reporte: Reporte): Observable<Respuesta> {
     return this._http.post<Respuesta>(`${this.urlApi}/reportes`, reporte);
   }
 
+  calcularHoras(idTecnico: string,numeroSemana: number): Observable<Respuesta>{
+    return this._http.get<Respuesta>(`${this.urlApi}/reportes/calcularHoras/${idTecnico}/${numeroSemana}`);
+  }
+  
 
 }
 

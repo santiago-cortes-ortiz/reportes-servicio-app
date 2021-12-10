@@ -1,8 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { BehaviorSubject, catchError, map, Observable, of, startWith } from 'rxjs';
-import { Reporte } from 'src/app/interface/reporte';
 import { Respuesta } from 'src/app/interface/respuesta';
 import { ReporteService } from 'src/app/service/reporte.service';
 

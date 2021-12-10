@@ -1,4 +1,5 @@
 import { Reporte } from "./reporte";
+import { ReportesHorasDTO } from "./reportes-horas";
 
 export interface Respuesta{
     marcaTiempo: Date;
@@ -7,5 +8,5 @@ export interface Respuesta{
     razon: string;
     mensaje: string;
     mensajeDesarollador: string;
-    dato: { reportes?: Reporte[], reporte?: Reporte };
+    dato: { reportes?: Reporte[], reporte?: Reporte, horas?: ReportesHorasDTO };
 }

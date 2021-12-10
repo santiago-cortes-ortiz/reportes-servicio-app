@@ -1,0 +1,29 @@
+<h2 style="margin-bottom: 12px;">Calcular horas</h2>
+<form #buscado="ngForm" (ngSubmit)="calcularHoras(buscado)">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">identificacion del tecnico</label>
+        <input type="text" ngModel name="idTecnico" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el id del tecnico">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">numero de semana</label>
+        <input type="number" ngModel name="numeroSemana" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el numero de la semana">
+    </div>
+    <div class="col-auto">
+        <button type="submit" type="submit" [disabled]="buscado.invalid" class="btn btn-primary mb-3">Consultar horas</button>
+    </div>
+</form>
+<h3>Calculo: </h3>
+<div *ngIf="error != null" class="alert alert-danger" role="alert">
+    No se encotro referencias a la busqueda
+  </div>
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">horas totales: {{ respuesta?.dato.horas.horasTotales  }}</li>
+      <li class="list-group-item">horas normales: {{ respuesta?.dato.horas.horasNormales  }}</li>
+      <li class="list-group-item">horas normales extras: {{ respuesta?.dato.horas.horasNormalesExtras  }}</li>
+      <li class="list-group-item">horas norturnas: {{ respuesta?.dato.horas.horasNocturnas  }}</li>
+      <li class="list-group-item">horas norturnas extras: {{ respuesta?.dato.horas.horasNocturnasExtras  }}</li>
+      <li class="list-group-item">horas dominicales: {{ respuesta?.dato.horas.horasDomicinales  }}</li>
+      <li class="list-group-item">horas dominicales extras: {{ respuesta?.dato.horas.horasDomicinalesExtras  }}</li>
+    </ul>
+</div>

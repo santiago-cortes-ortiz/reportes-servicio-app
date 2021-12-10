@@ -12,6 +12,7 @@ import { APP_ROUTING } from './app.routes';
 //forms
 import { FormsModule } from '@angular/forms';
 import { ReporteService } from './service/reporte.service';
+import { CalculoHorasComponent } from './components/calculo-horas/calculo-horas.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReporteService } from './service/reporte.service';
     AppComponent,
     NavbarComponent,
     ReporteComponent,
-    HomeComponent
+    HomeComponent,
+    CalculoHorasComponent
   ],
   imports: [
     BrowserModule,

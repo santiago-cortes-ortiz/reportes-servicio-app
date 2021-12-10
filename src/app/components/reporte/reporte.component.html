@@ -10,11 +10,11 @@
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">fecha de inicio</label>
-        <input type="date" ngModel name="fechaInicio" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el id del tecnico">
+        <input type="datetime-local" ngModel name="fechaInicio" required class="form-control" id="exampleFormControlInput1" >
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">fecha del fin</label>
-        <input type="date" ngModel name="fechaFin" required class="form-control" id="exampleFormControlInput1" placeholder="ingresa el id del tecnico">
+        <input type="datetime-local" ngModel name="fechaFin" required class="form-control" id="exampleFormControlInput1">
     </div>
     <div class="col-auto">
         <button type="submit" type="submit" [disabled]="addForm.invalid" class="btn btn-primary mb-3">Realizar reporte</button>
